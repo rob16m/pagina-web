@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roberto Márquez - Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    sf
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#" id="menu-home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" id="menu-about" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#" id="menu-portfolio" onclick="showSection('portfolio')">Portfolio</a></li>
+            <li><a href="#" id="menu-contact" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+        <div class="lang-buttons">
+            <button onclick="changeLanguage('en')">EN</button>
+            <button onclick="changeLanguage('es')">ES</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="active">
+        <h1 id="home-title">Welcome to my personal website!</h1>
+        <p id="home-text">Showcasing my <strong>portfolio</strong>, skills, and experience in <strong>web development</strong>, <strong>digital art</strong>, and <strong>game development</strong>.</p>
+        <a class="btn" id="home-btn" onclick="showSection('portfolio')">See My Work</a>
+    </section>
+
+    <section id="about">
+        <h2 id="about-title">About Me</h2>
+        <p id="about-text">I have experience in <strong>web development</strong>, <strong>digital art</strong>, and <strong>game development</strong>. Passionate about creating interactive experiences and visually appealing designs.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2 id="portfolio-title">Portfolio</h2>
+        <div class="projects">
+            <div class="project" id="proj1">
+                <h3 id="proj1-title">Project 1</h3>
+                <p id="proj1-text">Description of <strong>project 1</strong>.</p>
+            </div>
+            <div class="project" id="proj2">
+                <h3 id="proj2-title">Project 2</h3>
+                <p id="proj2-text">Description of <strong>project 2</strong>.</p>
+            </div>
+            <div class="project" id="proj3">
+                <h3 id="proj3-title">Project 3</h3>
+                <p id="proj3-text">Description of <strong>project 3</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-title">Contact</h2>
+        <p id="contact-text">You can contact me via GitHub: <a href="https://github.com/rob16m" target="_blank">https://github.com/rob16m</a></p>
+    </section>
+</main>
+
+<footer>
+    <p id="footer-text">&copy; 2025 Roberto Márquez</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+

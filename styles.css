@@ -1,0 +1,100 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; background:#f4f4f4; color:#333; }
+
+header { background:#111; color:#fff; position:fixed; width:100%; top:0; z-index:1000; }
+
+nav {
+    display: flex;
+    justify-content: center; /* centra los enlaces del menú */
+    align-items: center;
+    padding:1rem 2rem;
+    gap:2rem;
+    position: relative;
+}
+
+nav ul { display:flex; list-style:none; gap:2rem; }
+
+nav ul li a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+    transition:color 0.3s;
+}
+nav ul li a:hover { color:#ff6600; }
+
+.lang-buttons {
+    display:inline-block;
+    position: absolute; /* posiciona los botones respecto al nav */
+    right: 2rem; /* a la derecha */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.lang-buttons button {
+    background:#ff6600;
+    color:#fff;
+    border:none;
+    padding:0.3rem 0.6rem;
+    margin-left:0.3rem;
+    cursor:pointer;
+    border-radius:5px;
+    font-weight:bold;
+    transition:background 0.3s;
+}
+.lang-buttons button:hover { background:#e55b00; }
+
+main { padding-top:80px; }
+
+section {
+    display:none;
+    min-height:80vh;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:6rem 2rem;
+    flex-direction:column;
+}
+section.active { display:flex; }
+
+h1,h2 { margin-bottom:1.5rem; }
+
+.btn {
+    display:inline-block;
+    background:#ff6600;
+    color:#fff;
+    padding:0.8rem 1.5rem;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:background 0.3s;
+}
+.btn:hover { background:#e55b00; }
+
+.projects {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:2rem;
+    margin-top:2rem;
+}
+.project {
+    background:#fff;
+    width:300px;
+    padding:1rem;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    text-align:center;
+    transition:transform 0.3s;
+}
+.project:hover { transform:translateY(-10px); box-shadow:0 8px 25px rgba(0,0,0,0.3); }
+
+footer { background:#111; color:#fff; text-align:center; padding:2rem 0; margin-top:2rem; }
+
+@media(max-width:768px){
+    nav ul{flex-direction:column; gap:1rem;}
+    .lang-buttons{
+        position: static;
+        transform:none;
+        margin-top:0.5rem;
+    }
+}
